@@ -11,8 +11,8 @@ form.addEventListener('submit', function(e) {
     const dob = document.getElementById('dob').value;
     const terms = document.getElementById('terms').checked;
 
-    addEntryToTable(name, email, password, dob, terms);
-    saveEntryToLocalStorage(name, email, password, dob, terms);
+    addTabulateEntry(name, email, password, dob, terms);
+    saveToLocalStorage(name, email, password, dob, terms);
     form.reset();
 });
 
