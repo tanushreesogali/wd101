@@ -16,7 +16,7 @@ form.addEventListener('submit', function(e) {
     form.reset();
 });
 
-function addEntryToTable(name, email, password, dob, terms) {
+function addTabulateEntry(name, email, password, dob, terms) {
     tableBody.innerHTML+= `
         <td class="border px-4 py-2">${name}</td>
         <td class="border px-4 py-2">${email}</td>
@@ -26,7 +26,7 @@ function addEntryToTable(name, email, password, dob, terms) {
     `;
 }
 
-function saveEntryToLocalStorage(name, email, password, dob, terms) {
+function saveToLocalStorage(name, email, password, dob, terms) {
     let entries = JSON.parse(localStorage.getItem('formEntries')) || [];
     entries.push({name, email, password, dob, terms});
     localStorage.setItem('formEntries', JSON.stringify(entries));
